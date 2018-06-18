@@ -1,0 +1,31 @@
+﻿@model PolyclinicProject.Domain.Entities.Schedule
+@{
+
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div>
+    <h4>Расписание</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+          <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }, new { @class = "label label-warning" }) |
+    @Html.ActionLink("Вернуться обратно", "Index", null, new { @class = "label label-info" })
+</p>

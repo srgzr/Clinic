@@ -1,0 +1,85 @@
+﻿@model PolyclinicProject.Domain.Common.PagingOutput<PolyclinicProject.Domain.Entities.UserInfo>
+@using PolyclinicProject.WebUI.HtmlHelpers
+@using PolyclinicProject.Domain.Enum;
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Админы";
+    string currentFilter = ViewBag.CurrentFilter;
+    SortOprions currentSort = ViewBag.CurrentSort;
+
+}
+
+<h2> Пользователи </h2>
+
+<p>
+    @Html.ActionLink("Создать", "Register", null, new { @class = "label label-success" })
+</p>
+
+<div class="wrapper">
+    <div class="search-box">
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text" name="search" value="@ViewBag.searchQuery" class="search-text form-control" placeholder="Search..." />
+            </div>
+            <button type="submit" class="btn btn-info">Поиск</button>
+        </form>
+    </div>
+    <div class="table-responsive">
+
+        <table class="table table-bordered table-condensed table-hover">
+            <tr class="mycolor" id="link_bar">
+
+                <th>
+                    @Html.ActionLink("ФИО", "Index", Request.QueryString.ToRouteValueDictionary("sortOrder", (string)ViewBag.NameSortParam))
+                    @Html.SortIdentifier(currentSort, "Name")
+                </th>
+                <th>
+                    @Html.ActionLink("Телефон", "Index", Request.QueryString.ToRouteValueDictionary("sortOrder", (string)ViewBag.PhoneNumberSortParam))
+                    @Html.SortIdentifier(currentSort, "PhoneNumber")
+                </th>
+                <th>
+                    @Html.ActionLink("Email", "Index", Request.QueryString.ToRouteValueDictionary("sortOrder", (string)ViewBag.EmailSortParam))
+                    @Html.SortIdentifier(currentSort, "Email")
+                </th>
+                <th>
+                    @Html.ActionLink("Роль", "Index", Request.QueryString.ToRouteValueDictionary("sortOrder", (string)ViewBag.RoleSortParam))
+                    @Html.SortIdentifier(currentSort, "Role")
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Data.FirstOrDefault().IsActive)
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model.Data)
+            {
+                <tr>
+                    <td> @item.Name </td>
+                    <td> @item.PhoneNumber </td>
+                    <td> @item.Email </td>
+                    <td>@item.RoleInfo.Name</td>
+                    <td>
+                        @Html.CheckBox(item.IsActive.ToString(), item.IsActive, new { @class = "checkbox disabled" })
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }, new { @class = "label label-warning" }) |
+                        @Html.ActionLink("Просмотреть", "Detail", new { id = item.Id }, new { @class = "label label-success" }) |
+                        @Html.ActionLink("Удалить", "Delete", new { id = item.Id }, new { @class = "label label-default" }) |
+                        @if (item.IsActive == true)
+                        {
+                            @Html.ActionLink("Деактивировать", "ActiveState", new { id = item.Id }, new { @class = "label label-danger" })
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Активировать", "ActiveState", new { id = item.Id }, new { @class = "label label-danger" })
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+<div class="btn-group pull-right pagination">
+    @Html.PageLinks(Model, x => Url.Action("Index", new { page = x }))
+</div>

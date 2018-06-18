@@ -1,0 +1,54 @@
+﻿.field-validation-error {
+    color: #e74c3c;
+}
+
+/*.field-validation-valid {
+    display: none;
+}*/
+
+.input-validation-error {
+    border: 1px solid #e74c3c;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/*.validation-summary-valid {
+    display: none;
+}*/
+
+.field-validation-error {
+    color: #e74c3c;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #e74c3c;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/*.validation-summary-valid {
+    display: none;
+}*/
+
+/*.field-validation-error {
+    color: #6699CC;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.input-validation-error {
+    border: 1px solid #006699;
+    background-color: silver;
+}*/

@@ -1,0 +1,437 @@
+﻿@*@using System.Web.Optimization*@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            /*background-color: azure;*/
+            /*background: url(https://s-media-cache-ak0.pinimg.com/originals/0b/d4/cb/0bd4cba0aff02ad4213e650505115d49.jpg) center no-repeat;*/
+            /*background: url(https://www.walldevil.com/wallpapers/w04/118986-artwork-athletes-running-sports-women.jpg) no-repeat center center fixed;*/
+            /*background-image: url('../../Content/ico/img.jpg') ;*/
+            /*-webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;*/
+            
+        }
+
+        a {
+            color: #004d57; /* Цвет обычной ссылки */
+            text-decoration: none; /* Убираем подчеркивание у ссылок */
+        }
+
+            a:hover {
+                color: #333; /* Цвет ссылки при наведении на нее курсора мыши */
+                text-decoration: underline; /* Добавляем подчеркивание */
+            }
+
+        body:after {
+            /*content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;*/
+            /*background-size: cover;*/
+        }
+
+        #mogo-header {
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #mogo-header-inner {
+            position: relative;
+            z-index: 5;
+        }
+        /*=======================main navbar section===========================*/
+        #top-navbar {
+            background: none;
+            border: none;
+            border-radius: 0;
+        }
+
+            #top-navbar .navbar-brand {
+                color: #fff;
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+            #top-navbar .navbar-nav > li > a {
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+                #top-navbar .navbar-nav > li > a:hover, #top-navbar .navbar-nav > .active > a, #top-navbar .navbar-nav > .active > a:hover {
+                   color: #b94a48;
+                    border-color: #b94a48;
+                    background: none;
+                }
+
+            #top-navbar .main-nav > li > a {
+                font-weight: 400;
+                text-transform: uppercase;
+                border-bottom: 2px solid transparent;
+                padding: 15px 5px 5px;
+                margin: 0 12px;
+                color: #fff;
+                text-align: center;
+            }
+
+            #top-navbar .navbar-collapse {
+                border-top-width: 0;
+                padding-top: 10px;
+                margin-top: 5px;
+            }
+
+        .fixed-me {
+            transition: all .5s;
+        }
+
+        .fixed-me {
+            background-color: rgba(241, 114, 114, 0.96) !important;
+            padding: 0 !important;
+            margin-bottom: 5px;
+            position: fixed;
+            top: 0;
+            z-index: 888;
+            width: 100%;
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .site-logo {
+            padding: 15px 16px;
+            margin: 15px 0;
+        }
+
+        .navbar-me {
+            /*min-height: 70px;*/
+            background-color: transparent;
+            top: 0;
+            border: 0;
+            border-radius: 0;
+        }
+
+        .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+            background-color: transparent;
+        }
+
+        .menu-collapsed-button {
+            margin: 20px 15px 10px 15px !important;
+        }
+
+        /*======================main slider section style===================*/
+
+        #mogo-slider {
+            padding: 40px 0 0;
+        }
+
+            #mogo-slider .carousel-inner {
+                /*height: auto;*/
+            }
+
+                #mogo-slider .carousel-inner > .item {
+                    text-align: center;
+                    color: #fff;
+                }
+
+            #mogo-slider .carousel-indicators {
+                width: 100%;
+                left: 0;
+                position: static;
+                margin: 0;
+                margin-top: 20%;
+            }
+
+                #mogo-slider .carousel-indicators li,
+                #mogo-slider .carousel-indicators li.active {
+                    float: left;
+                    /*width: 25%;*/
+                    /*height: auto;*/
+                    margin: 0;
+                    text-indent: initial;
+                    border-radius: 0;
+                    background: none;
+                    text-align: left;
+                    border: none;
+                }
+
+                    #mogo-slider .carousel-indicators li .inner {
+                        border-top: 2px solid #f7eac4;
+                        position: relative;
+                        color: #faf3e0;
+                        text-transform: uppercase;
+                        margin: 0 12px;
+                        padding: 10px 0;
+                    }
+
+                    #mogo-slider .carousel-indicators li:hover .inner,
+                    #mogo-slider .carousel-indicators li.active .inner {
+                        border-color: #fff;
+                        color: #fff;
+                    }
+
+                        #mogo-slider .carousel-indicators li:hover .inner:after,
+                        #mogo-slider .carousel-indicators li.active .inner:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: -2px;
+                            /*width: 60px;*/
+                            /*height: 2px;*/
+                            background: #f38181;
+                        }
+
+                    #mogo-slider .carousel-indicators li .number {
+                        font-weight: 700;
+                        font-size: 18px;
+                        margin-right: 3px;
+                    }
+
+            /*==============slider content===================*/
+
+            #mogo-slider .mogo-slider-title {
+                font-size: 200%;
+                color: #fff;
+            }
+
+                #mogo-slider .mogo-slider-title .mogo-slider-sub {
+                    font-size: 250%;
+                }
+
+        .mogo-slider-title .mogo-slider-sub {
+            display: block;
+            text-transform: none;
+            font-weight: 400;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .mogo-slider-title {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 1;
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .mogo-slider-sub {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 1;
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        .mogo-slider-title .mogo-slider-sub:after {
+            background: #fff;
+        }
+
+        .mogo-slider-title:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            /*width: 50px;*/
+            /*height: 2px;*/
+            background: #fff;
+            transform: translateX(-50%);
+        }
+
+        .slider-btn {
+            display: inline-block;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            text-align: center;
+            border: 2px solid #fff;
+            font-size: 12px;
+            line-height: 100%;
+        }
+    </style>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/ErrorStyles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"> </script>
+    <script src="~/Scripts/bootstrap.js">  </script>
+
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="~/Content/bootswatch/united/bootstrap.css" />
+
+    <!-- if you wanted Amelia, use this instead: -->
+    <link rel="stylesheet" href="~/Content/bootswatch/united/bootstrap.min.css" />
+
+    <script type="text/javascript">
+        $('.dropdown-toggle').dropdown()
+    </script>
+
+    <title>@ViewBag.Title</title>
+    <style>
+        .navbar-right {
+            float: right !important;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    </style>
+
+    <style type="text/css">
+        .table > thead > tr.mycolor > th {
+            /* Цвет фона */
+            background-color: #1d9ae1;
+            /* Цвет текста */
+            color: #ffffff;
+            opacity: 0.5;
+        }
+
+        table {
+            /*border: 1px #ff0000 solid;*/ /* стиль рамки */
+            border-collapse: collapse; /* убирание задвоенности рамки */
+            background-color: rgba(23, 105, 113, 0.40);
+            padding: 10px; /* Поля вокруг текста */
+            color: #000000; /* Цвет текста */
+        }
+
+        td {
+            background-color: rgba(48, 188, 202, 0.40);
+            padding: 0.2em;
+        }
+
+        th {
+            border: 1px #0000ff solid; /* стиль рамки заголовков */
+            padding: 0.2em;
+            color: #000000; /* Цвет текста */
+        }
+
+        #link_bar a {
+            font-weight: bold;
+            float: left;
+        }
+
+            #link_bar a:link {
+                color: #2c2424;
+            }
+
+            #link_bar a:visited {
+                color: #604343;
+            }
+
+            #link_bar a:hover {
+                color: #62688b;
+            }
+
+            #link_bar a:active {
+                color: #f0f0f0;
+            }
+
+        .badge-error {
+            background-color: #b94a48;
+        }
+
+            .badge-error:hover {
+                background-color: #953b39;
+            }
+
+        .badge-warning {
+            background-color: #f89406;
+        }
+
+            .badge-warning:hover {
+                background-color: #c67605;
+            }
+
+        .badge-success {
+            background-color: #468847;
+        }
+
+            .badge-success:hover {
+                background-color: #356635;
+            }
+
+        .badge-info {
+            background-color: #3a87ad;
+        }
+
+            .badge-info:hover {
+                background-color: #2d6987;
+            }
+
+        .badge-inverse {
+            background-color: #333333;
+        }
+
+            .badge-inverse:hover {
+                background-color: #1a1a1a;
+            }
+    </style>
+</head>
+<body>
+
+    <div id="mogo-header">
+        <div id="mogo-header-inner">
+            <!--navbar menu-->
+            <nav id="top-navbar" class="navbar navbar-default navbar-me">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed menu-collapsed-button" data-toggle="collapse" data-target="#navbar-primary-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand site-logo" style="color: #18bc9c;;" href="@Url.Action("Index", "Personal")">Поликлиника</a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-right hidden-lg">
+                        <ul class="nav navbar-nav main-nav">
+                            <li><a href="@Url.Action("EditPersonalInfo", "UserInfo")" class="elements" style="color:  #f38181"> <span>Настройки</span></a></li>
+                            <li><a href="@Url.Action("View", "Schedules")" class="elements" style="color: #f38181"> <span>Расписание</span></a></li>
+                            <li><a href="@Url.Action("Logout", "Account")" class="elements" style="color: #f38181"> <span>Выход</span></a></li>
+
+                            
+                        
+                         </ul>
+                    </div>
+                    <div class="collapse navbar-responsive-collapse hidden-lg hidden-md hidden-sm" id="navbar-primary-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="@Url.Action("EditPersonalInfo", "UserInfo")" class="elements" style="color:  #f38181" data-toggle="collapse" data-target=".navbar-responsive-collapse">Настройки</a></li>
+                            <li><a href="@Url.Action("View", "Schedules")" class="elements" style="color: #f38181" data-toggle="collapse" data-target=".navbar-responsive-collapse">Расписание</a></li>                           
+                            <li><a href="@Url.Action("Logout", "Account")" class="elements" style="color: #f38181" data-toggle="collapse" data-target=".navbar-responsive-collapse">Выход</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </nav>
+
+            <div class="container body-content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

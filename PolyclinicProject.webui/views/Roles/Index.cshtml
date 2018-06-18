@@ -1,0 +1,55 @@
+﻿@model PolyclinicProject.Domain.Common.PagingOutput<PolyclinicProject.Domain.Entities.RoleInfo>
+@using PolyclinicProject.WebUI.HtmlHelpers
+@{ ViewBag.Title = "Роли";}
+<h2> Роли </h2>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<p>
+    @Html.ActionLink("Создать", "Create", null, new { @class = "label label-success" })
+</p>
+
+<div class="table-responsive">
+
+    <table class="table table-bordered table-condensed table-hover">
+        <tr class="mycolor">
+            <th>
+                Наименование
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().IsActive)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.Data)
+            {
+            <tr>
+                <td> @item.Name </td>
+                <td>@item.Description </td>
+                <td>
+                    @Html.CheckBox(item.IsActive.ToString(), item.IsActive, new { @class = "checkbox disabled" })
+                </td>
+
+                <td>
+                    @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }, new { @class = "label label-warning" }) |
+                    @Html.ActionLink("Удалить", "Delete", new { id = item.Id }, new { @class = "label label-default" }) |
+                    @if (item.IsActive == true)
+                    {
+                        @Html.ActionLink("Деактивировать", "ActiveState", new { id = item.Id }, new { @class = "label label-danger" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Активировать", "ActiveState", new { id = item.Id }, new { @class = "label label-danger" })
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div class="btn-group pull-right pagination">
+    @Html.PageLinks((PolyclinicProject.Domain.Common.PagingInfo)Model, x => Url.Action("Index", new { page = x }))
+</div>

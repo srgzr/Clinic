@@ -1,0 +1,44 @@
+﻿@*@{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }*@
+
+<style>
+    .error-template {
+        padding: 40px 15px;
+        text-align: center;
+        color: black;
+    }
+
+    .error-actions {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+        .error-actions .btn {
+            margin-right: 10px;
+        }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    <i class="fa fa-exclamation-triangle fa-lg"></i>    Oops!
+                </h1>
+                <h2>
+                    404 Not Found
+                </h2>
+                <div class="error-details">
+                    Запрашиваемая вами страница отсутствует или недоступна!
+                </div>
+                <div class="error-actions">
+
+                    <a href="~/Home/Index" class="btn btn-danger btn-lg">
+                        <i class="fa fa-reply-all fa-lg"></i> Перейти на главную страницу
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

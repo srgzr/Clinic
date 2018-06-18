@@ -1,0 +1,180 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPersonal.cshtml";
+}
+<style type="text/css">
+    .viewWrap {
+        padding: 50px;
+    }
+
+    .headingWrap {
+        color: white;
+    }
+
+    .viewWrap .viewBtnGroup {
+        max-width: 800px;
+        margin: auto;
+    }
+
+        .viewWrap .viewBtnGroup .viewMethod {
+            padding: 40px;
+            box-shadow: none;
+            position: relative;
+        }
+
+            .viewWrap .viewBtnGroup .viewMethod.active {
+                outline: none !important;
+            }
+
+                .viewWrap .viewBtnGroup .viewMethod.active .method {
+                    border-color: rgb(117, 51, 17);
+                    outline: none !important;
+                    box-shadow: 0px 3px 22px 0px #7b7b7b;
+                }
+
+            .viewWrap .viewBtnGroup .viewMethod .method {
+                position: absolute;
+                right: 3px;
+                top: 3px;
+                bottom: 3px;
+                left: 3px;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                border: 2px solid transparent;
+                transition: all 0.5s;
+            }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.password {
+                    background-image: url('../../Content/ico/ic_assignment_ind_128_28218.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.fitnessType {
+                    background-image: url('../../Content/ico/ic_location_history_128_28439.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.fitnessUnit {
+                    background-image: url('../../Content/ico/ic_location_city_128_28441.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.menuItem {
+                    background-image: url('../../Content/ico/ic_dvr_128_28239.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.menuSetting {
+                    background-image: url('../../Content/ico/ic_playlist_add_128_28561.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.news {
+                    background-image: url('../../Content/ico/ic_assignment_128_28219.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.pays {
+                    background-image: url('../../Content/ico/ic_credit_card_128_28282.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.record {
+                    background-image: url('../../Content/ico/ic_rate_review_128_28537.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.role {
+                    background-image: url('../../Content/ico/ic_perm_identity_128_28586.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.room {
+                    background-image: url('../../Content/ico/ic_now_wallpaper_128_28611.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.scheduler {
+                    background-image: url('../../Content/ico/ic_event_128_28234.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.time {
+                    background-image: url('../../Content/ico/ic_access_alarms_128_28136.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.users {
+                    background-image: url('../../Content/ico/ic_quick_contacts_dialer_128_28542.png');
+                }
+
+                .viewWrap .viewBtnGroup .viewMethod .method.logout {
+                    background-image: url('../../Content/ico/ic_exit_to_app_128_28418.png');
+                }
+
+    .story-content {
+        display: none;
+    }
+
+    .method:hover .story-content {
+        display: block;
+    }
+
+    .viewWrap .viewBtnGroup .viewMethod .method:hover {
+        border-color: rgb(232, 200, 27);
+        outline: none !important;
+        content: attr(data-title); /* Выводим текст */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        background: rgba(243,129,129,0.5); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(top, rgba(243,129,129,0.9), rgba(252, 227, 138, 0.5));
+        background: -o-linear-gradient(top, rgba(243,129,129,0.5), rgba(252, 227, 138, 0.5));
+        background: linear-gradient(to bottom, rgba(243,129,129,0.5), rgba(252, 227, 138, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="viewCont">
+            <div class="headingWrap">
+                <h3 class="headingTop text-center" style="color: gold">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    Выберите доступные действия
+                </h3>
+            </div>
+            <div class="viewWrap">
+                <div class="btn-group viewBtnGroup btn-group-justified" data-toggle="buttons">
+
+                    <label class="btn viewMethod active">
+                        <div class="method news" data-title="Responsive">
+                            <div onclick="document.location.href = 'http://localhost:18915/Schedules/View'">
+                                <span class="story-content">
+                                    <br> Личное расписание
+                                </span>
+                            </div>
+                        </div>
+                        <input type="radio" name="options" checked>
+                    </label>
+         
+
+
+                    <label class="btn viewMethod active">
+                        <div class="method password" data-title="Responsive">
+                            <div onclick="document.location.href = 'http://localhost:18915/UserInfo/EditPersonalInfo'">
+                                <span class="story-content">
+                                   <br> Настройки
+                                </span>
+                            </div>
+                        </div>
+                        <input type="radio" name="options" checked>
+                    </label>
+                    <label class="btn viewMethod active">
+                        <div class="method logout" data-title="Responsive">
+                            <div onclick="document.location.href = 'http://localhost:18915/Account/Logout'">
+                                <span class="story-content">
+                                    <br> Выход
+                                </span>
+                            </div>
+                        </div>
+                        <input type="radio" name="options" checked>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

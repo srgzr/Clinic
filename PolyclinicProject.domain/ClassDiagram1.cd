@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PolyclinicProject.Domain.Entities.AppUserLogin" Collapsed="true">
+    <Position X="11" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\UserInfoZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.AppUserRole" Collapsed="true">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\UserInfoZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.AppUserClaim" Collapsed="true">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\UserInfoZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.AppClaimsPrincipal" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\UserInfoZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.UserInfoZarovskiyS" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARAEAACAAABAAAEAAEQAQAAAAIBAAKAAAAAQAAAIg=</HashCode>
+      <FileName>Entities\UserInfoZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.CommanEntity">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CommanEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.PersonalZarovskiyS">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAQAAECAABEAABAAAAACAAA=</HashCode>
+      <FileName>Entities\PersonalZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Polyclinic" />
+      <Property Name="UserInfo" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.PolyclinicZarovskiyS">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAABAACAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PolyclinicZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.PositionZarovskiyS">
+    <Position X="1" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PositionZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.RoleInfoZarovskiyS" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAEAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\RoleInfoZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PolyclinicProject.Domain.Entities.ScheduleZarovskiyS">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgCAAAAAQAAAAAAAQACAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\ScheduleZarovskiyS.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Personal" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
